@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false" >
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/month_year"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#81A594"
+            android:gravity="center"
+            android:text="@string/monthyear"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <!-- Left Pane -->
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="120dp"
+        android:layout_height="266dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:background="#00628B"
+        android:baselineAligned="false" >
+        
+        <ListView
+	        android:id="@+id/listview"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent" />
+    </RelativeLayout>
+
+    <!-- Right Pane -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="266dp"
+        android:layout_alignTop="@+id/relativeLayout1"
+        android:layout_toRightOf="@+id/relativeLayout1"
+        android:background="#E6E6DC"
+        android:baselineAligned="false" >
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/currDate"
+            android:gravity="center"
+			android:background="#0099CC"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/home_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/currentDate"
+            android:layout_marginTop="23dp"
+            android:text="@string/home"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editHome"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/home_Title"
+            android:inputType="textMultiLine" 
+            android:gravity="top">
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/work_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editHome"
+            android:text="@string/work"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editWork"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/work_Title"
+            android:inputType="textMultiLine" 
+            android:gravity="top"/>
+
+    </RelativeLayout>
+
+    <!-- Bottom Bar -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#81A594"
+        android:baselineAligned="false" >
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/cancel" />
+
+        <Button
+            android:id="@+id/clone_btn"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/cancel_btn"
+            android:layout_alignBottom="@+id/cancel_btn"
+            android:layout_toRightOf="@+id/cancel_btn"
+            android:text="@string/clone" />
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/clone_btn"
+            android:layout_alignBottom="@+id/clone_btn"
+            android:layout_toRightOf="@+id/clone_btn"
+            android:text="@string/delete" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/delete_btn"
+            android:layout_alignBottom="@+id/delete_btn"
+            android:layout_toRightOf="@+id/delete_btn"
+            android:text="@string/save" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
